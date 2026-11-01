@@ -1,0 +1,147 @@
+
+/* COLORS */
+$color_background: #070710;
+$colorSurface: #0B0B14;
+$colorBorder: #29293D;
+$colorText: #F5F3FF;
+$colorTextMuted: #C4C7D8;
+$colorPrimary: #8B5CF6;
+$colorPrimaryLight: #a58eea;
+$colorPrimaryDeep: #4C1D95;
+
+
+/* NIGHT — thème par défaut */
+:root {
+    color-scheme: dark;
+
+    --color-background: #{$color_background};
+    --color-surface: #{$colorSurface};
+    --color-border: #{$colorBorder};
+    --color-text: #{$colorText};
+    --color-text-muted: #{$colorTextMuted};
+    --color-primary: #{$colorPrimary};
+    --color-primary-light: #{$colorPrimaryLight};
+    --color-primary-deep: #{$colorPrimaryDeep};
+
+    /* Couleurs transparentes */
+    --color-card-shadow: rgba(0, 0, 0, 0.12);
+    --color-primary-transparent: rgba(139, 92, 246, 0.08);
+    --color-primary-transparent-soft: rgba(139, 92, 246, 0.1);
+    --color-primary-border: rgba(139, 92, 246, 0.15);
+    --color-primary-border-strong: rgba(139, 92, 246, 0.18);
+}
+
+
+/* LIGHT */
+[data-theme="light"] {
+    color-scheme: light;
+
+    --color-background: #F8F7FC;
+    --color-surface: #FFFFFF;
+    --color-border: #E3DFED;
+    --color-text: #211A31;
+    --color-text-muted: #625B70;
+    --color-primary: #7041D8;
+    --color-primary-light: #8058DC;
+    --color-primary-deep: #4C1D95;
+
+    /* Couleurs transparentes */
+    --color-card-shadow: rgba(0, 0, 0, 0.12);
+    --color-primary-transparent: rgba(139, 92, 246, 0.08);
+    --color-primary-transparent-soft: rgba(139, 92, 246, 0.1);
+    --color-primary-border: rgba(139, 92, 246, 0.15);
+    --color-primary-border-strong: rgba(139, 92, 246, 0.18);
+}
+
+
+
+
+
+// Font family
+$fontFamily: 'Manrope', sans-serif;
+
+
+// ========================================
+// FONT SIZES — DESKTOP
+// ========================================
+
+$fontSizeH1: 44px;
+$fontSizeH2: 36px;
+$fontSizeH3: 28px;
+$fontSizeH4: 22px;
+$fontSizeH5: 18px;
+$fontSizeH6: 16px;
+
+$fontSizeP: 16px;
+$fontSizeA: 16px;
+$fontSizeSmall: 14px;
+$fontSizeTiny: 12px;
+
+
+// ========================================
+// FONT SIZES — TABLETTE
+// ========================================
+
+$fontSizeH1Tablet: 38px;
+$fontSizeH2Tablet: 32px;
+$fontSizeH3Tablet: 25px;
+$fontSizeH4Tablet: 21px;
+$fontSizeH5Tablet: 17px;
+$fontSizeH6Tablet: 16px;
+
+$fontSizePTablet: 16px;
+$fontSizeATablet: 16px;
+$fontSizeSmallTablet: 14px;
+$fontSizeTinyTablet: 12px;
+
+
+// ========================================
+// FONT SIZES — MOBILE
+// ========================================
+
+$fontSizeH1Mobile: 32px;
+$fontSizeH2Mobile: 28px;
+$fontSizeH3Mobile: 23px;
+$fontSizeH4Mobile: 20px;
+$fontSizeH5Mobile: 17px;
+$fontSizeH6Mobile: 15px;
+
+$fontSizePMobile: 15px;
+$fontSizeAMobile: 15px;
+$fontSizeSmallMobile: 13px;
+$fontSizeTinyMobile: 12px;
+
+
+// ========================================
+// FONT WEIGHTS
+// ========================================
+
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;
+$fontWeightBold: 700;
+$fontWeightExtrabold: 800;
+
+
+// ========================================
+// NAVIGATION
+// ========================================
+
+$fontSizeNavigation: 15px;
+
+
+// ========================================
+// LAYOUT
+// ========================================
+
+$navbarHeight: 76px;
+$navbarHeightMobile: 64px;
+
+
+// ========================================
+// RESPONSIVE BREAKPOINTS
+// ========================================
+
+$breakpointMobile: 600px;
+$breakpointTablet: 900px;
+$breakpointDesktop: 1024px;

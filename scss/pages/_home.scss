@@ -1,0 +1,280 @@
+@use "../base/variables" as *;
+
+
+// ========================================
+// CONTENU PRINCIPAL
+// ========================================
+
+.mainContent {
+    padding: 40px 60px;
+}
+
+
+// ========================================
+// INTRODUCTION — TEXTE + SCÈNE 3D
+// ========================================
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.introContent {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.introLabel {
+    width: 100%;
+}
+
+.introScene {
+    position: relative;
+    flex: 1 1 50%;
+
+    height: 400px;
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+// ========================================
+// TEXTES DE L'INTRODUCTION
+// ========================================
+
+.introEyebrow {
+    margin: 0 0 8px;
+
+    color: var(--color-primary-light);
+    font-weight: $fontWeightSemibold;
+    letter-spacing: 2px;
+}
+
+.introTitle {
+    margin: 0 0 20px;
+
+    font-weight: $fontWeightExtrabold;
+}
+
+.textAccent {
+    color: var(--color-primary-deep);
+}
+
+.introDescription {
+    margin: 0 0 24px;
+
+    color: var(--color-text-muted);
+    font-weight: $fontWeightRegular;
+}
+
+
+// ========================================
+// SECTION DOMAINES
+// ========================================
+
+.domains {
+    width: 100%;
+    max-width: 1200px;
+    margin: 72px auto 0;
+}
+
+
+// ========================================
+// EN-TÊTE DE LA SECTION
+// ========================================
+
+.domainsHeader {
+    margin-bottom: 32px;
+}
+
+.domainsSubtitle {
+    margin: 0 0 12px;
+
+    color: var(--color-primary-light);
+    font-weight: $fontWeightBold;
+    letter-spacing: 2px;
+}
+
+.domainsHeader h2 {
+    margin: 0 0 12px;
+
+    color: var(--color-text);
+    font-weight: $fontWeightBold;
+}
+
+.domainsDescription {
+    margin: 0;
+    color: var(--color-text-muted);
+}
+
+.domainCardHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+// ========================================
+// GRILLE DES CARTES
+// ========================================
+
+.domainsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    margin: 0 auto;
+}
+
+
+// ========================================
+// CARTES
+// ========================================
+
+.domainCard {
+    min-width: 0;
+    padding: 20px;
+
+    background-color: var(--color-primary-transparent);
+    border: 1px solid var(--color-primary-border);
+    border-radius: 16px;
+}
+
+
+// ========================================
+// ICÔNES
+// ========================================
+
+.domainIcon {
+    display: flex;
+    flex: 0 0 44px;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--color-primary-light);
+    background: var(--color-primary-transparent);
+    border: 1px solid var(--color-primary-border);
+    border-radius: 11px;
+}
+
+
+// ========================================
+// TITRES ET DESCRIPTIONS
+// ========================================
+
+.domainCard h3 {
+    margin: 0 auto;
+
+    color: var(--color-primary-light);
+    font-weight: $fontWeightBold;
+    text-align: center;
+}
+
+.domainCard p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+// ========================================
+// TABLETTES
+// ========================================
+
+@media (max-width: $breakpointTablet) {
+
+    .mainContent {
+        padding: 30px 24px;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+
+        margin-top: 50px;
+    }
+
+    .introContent {
+        flex: auto;
+        width: 100%;
+    }
+
+    .introScene {
+        flex: auto;
+        width: 100%;
+        height: 350px;
+    }
+
+    .introLabel .btn {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .domains {
+        margin-top: 64px;
+    }
+
+    .domainsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: $breakpointMobile) {
+
+    .mainContent {
+        padding: 24px 20px;
+    }
+
+    .introScene {
+        height: 280px;
+    }
+
+    .introEyebrow,
+    .domainsSubtitle {
+        text-align: center;
+    }
+
+    .domains {
+        margin-top: 56px;
+    }
+
+    .domainsHeader {
+        margin-bottom: 28px;
+    }
+
+    .introTitle,
+    .introDescription,
+    .domainsHeader h2,
+    .domainsDescription {
+        text-align: center;
+    }
+
+    .domainsGrid {
+        gap: 16px;
+    }
+
+    .domainCard {
+        padding: 24px;
+    }
+}

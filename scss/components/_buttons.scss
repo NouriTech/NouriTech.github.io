@@ -1,0 +1,34 @@
+@use "../base/variables" as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    font-family: $fontFamily;
+    font-size: $fontSizeA;
+    font-weight: $fontWeightBold;
+    text-decoration: none;
+
+    color: $colorText;
+
+    background: linear-gradient(
+        100deg,
+        #1E4BC8 0%,
+        #4C3BCC 45%,
+        $colorPrimaryLight 100%
+    );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+
+    &:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 0 20px rgba(76, 59, 204, 0.35);
+        filter: brightness(1.08);
+    }
+}

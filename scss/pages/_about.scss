@@ -1,0 +1,376 @@
+
+@use "../base/variables" as *;
+
+
+// ========================================
+// PAGE À PROPOS
+// ========================================
+
+.about {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+// ========================================
+// PRÉSENTATION ET CARTE DE PROFIL
+// ========================================
+
+.aboutProfile {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+    align-items: start;
+    gap: 48px;
+    margin-top: 40px;
+}
+
+.aboutIntro {
+    min-width: 0;
+    padding-top: 8px;
+}
+
+.aboutIntroHeader {
+    width: 100%;
+    margin: 0;
+
+    h1 {
+        max-width: 650px;
+        margin: 0 0 24px;
+        line-height: 1.15;
+    }
+
+    > p:not(.aboutSubtitle) {
+        margin: 0 0 18px;
+        color: var(--color-text-muted);
+        line-height: 1.9;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.aboutSubtitle {
+    margin: 0 0 12px;
+    color: var(--color-primary-light);
+    font-weight: $fontWeightSemibold;
+    letter-spacing: 2px;
+}
+
+
+// ========================================
+// CARTE DE PROFIL
+// ========================================
+
+.aboutCard {
+    min-width: 0;
+    align-self: center;
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    box-shadow: 0 12px 36px var(--color-card-shadow);
+}
+
+.aboutCardImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-primary-transparent);
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        pointer-events: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.aboutCardContent {
+    padding: 24px;
+}
+
+.aboutCardEyebrow {
+    margin: 0 0 28px;
+    color: var(--color-primary-light);
+    font-size: $fontSizeTiny;
+    font-weight: $fontWeightSemibold;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.aboutInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.aboutInfoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+
+    > div {
+        min-width: 0;
+    }
+
+    .aboutInfoTitle {
+        margin: 0 0 5px;
+        font-size: $fontSizeSmall;
+        font-weight: $fontWeightSemibold;
+    }
+
+    p:not(.aboutInfoTitle) {
+        margin: 0;
+        color: var(--color-text-muted);
+        font-size: $fontSizeSmall;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+}
+
+.aboutInfoIcon {
+    display: flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-primary-light);
+    background: var(--color-primary-transparent-soft);
+    border: 1px solid var(--color-primary-border);
+    border-radius: 10px;
+}
+
+.aboutCardStatus {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+
+    p {
+        margin: 0;
+        color: #86EFAC;
+        font-size: $fontSizeSmall;
+        font-weight: $fontWeightSemibold;
+        line-height: 1.5;
+    }
+}
+
+
+// ========================================
+// QUALITÉS
+// ========================================
+
+.aboutPersonality {
+    margin-top: 36px;
+}
+
+.aboutTraitsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+}
+
+.aboutTrait {
+    min-width: 0;
+
+    .aboutTraitTitle {
+        margin: 0;
+        font-size: $fontSizeH5;
+        font-weight: $fontWeightSemibold;
+        line-height: 1.4;
+    }
+
+    > p:not(.aboutTraitTitle) {
+        margin: 0;
+        color: var(--color-text-muted);
+        font-size: $fontSizeSmall;
+        line-height: 1.6;
+    }
+}
+
+.aboutTraitHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.aboutTraitIcon {
+    display: flex;
+    flex: 0 0 44px;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--color-primary-light);
+    background: var(--color-primary-transparent-soft);
+    border-radius: 11px;
+}
+
+
+// ========================================
+// EN-TÊTE DES COMPÉTENCES
+// ========================================
+
+.aboutSectionHeader {
+    max-width: 760px;
+    margin-bottom: 28px;
+
+    h2 {
+        margin: 0 0 12px;
+        line-height: 1.3;
+    }
+
+    > p:last-child {
+        margin: 0;
+        color: var(--color-text-muted);
+        line-height: 1.7;
+    }
+}
+
+
+// ========================================
+// COMPÉTENCES
+// ========================================
+
+.aboutSkills {
+    width: 100%;
+    margin: 80px 0 40px;
+}
+
+
+// ========================================
+// BADGES DE COMPÉTENCES
+// ========================================
+
+.aboutSkillsBadges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+    justify-content: center;
+    list-style: none;
+
+    li {
+        max-width: 100%;
+        padding: 9px 10px;
+        text-align: center;
+        color: var(--color-primary-light);
+        background: var(--color-primary-transparent);
+        border: 1px solid var(--color-primary-border);
+        border-radius: 8px;
+        font-size: $fontSizeTiny;
+        font-weight: $fontWeightSemibold;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+// ========================================
+// TABLETTE
+// ========================================
+
+@media (max-width: $breakpointTablet) {
+
+    .aboutProfile {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        margin-top: 32px;
+    }
+
+    .aboutCard {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .aboutCardContent {
+        padding: 20px;
+    }
+
+    .aboutSkills {
+        margin-top: 64px;
+    }
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: $breakpointMobile) {
+
+    .aboutIntroHeader h1 {
+        text-align: center;
+    }
+
+    .aboutSubtitle {
+        text-align: center;
+    }
+
+    .aboutSectionHeader {
+        margin-bottom: 24px;
+
+        h2 {
+            text-align: center;
+        }
+
+        > p:last-child {
+            text-align: center;
+        }
+    }
+
+    .aboutProfile {
+        gap: 32px;
+        margin-top: 24px;
+    }
+
+    .aboutIntro {
+        padding-top: 0;
+    }
+
+    .aboutPersonality {
+        margin-top: 32px;
+    }
+
+    .aboutTraitsGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .aboutSkills {
+        margin-top: 52px;
+        margin-bottom: 24px;
+    }
+
+    .aboutSkillsBadges {
+        gap: 7px;
+        justify-content: center;
+
+        li {
+            padding: 6px 10px;
+            font-size: $fontSizeTinyMobile;
+        }
+    }
+
+    .aboutIntroHeader p {
+        text-align: center;
+    }
+}

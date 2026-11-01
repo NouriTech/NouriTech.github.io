@@ -1,0 +1,12 @@
+@use "base/variables";
+@use "base/base";
+@use "components/buttons";
+@use "components/cursorGlow";
+@use "layout/navbar";
+@use "layout/footer";
+@use "pages/home";
+@use "pages/projects";
+@use "pages/about";
+@use "pages/404" as *;
+@use "pages/legal";
+@use "pages/contact";

@@ -1,0 +1,81 @@
+
+@use "../base/variables" as *;
+
+
+// ========================================
+// PAGE 404
+// ========================================
+
+.errorPage {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+}
+
+.errorContent {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+// ========================================
+// CODE ERREUR
+// ========================================
+
+.errorCode {
+    font-size: clamp(100px, 18vw, 200px);
+    font-weight: $fontWeightExtrabold;
+    line-height: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 40px var(--color-primary-border-strong);
+    margin-bottom: 24px;
+}
+
+
+// ========================================
+// TITRE
+// ========================================
+
+.errorContent h1 {
+    font-weight: $fontWeightBold;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+
+// ========================================
+// DESCRIPTION
+// ========================================
+
+.errorContent p {
+    max-width: 480px;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+}
+
+
+// ========================================
+// RESPONSIVE
+// ========================================
+
+@media (max-width: $breakpointMobile) {
+
+    .errorPage {
+        min-height: 60vh;
+        padding: 40px 20px;
+    }
+
+    .errorCode {
+        margin-bottom: 20px;
+    }
+
+
+}

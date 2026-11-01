@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contactez NouriTech pour échanger autour du développement d'applications, de la Business Intelligence ou d'une éventuelle collaboration.">
+
+    <title>NouriTech | Contact</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="icon" href="../assets/icons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="cursorGlow" aria-hidden="true"></div>
+    <div id="navbarContainer"></div>
+
+
+    <main class="mainContent">
+        <section class="contact">
+            <header class="contactHeader">
+                <p class="contactEyebrow">PRENONS CONTACT</p>
+                <h1>Restons en contact</h1>
+                <p>
+                    Une question, une proposition ou simplement envie d'échanger ?
+                    N'hésitez pas à m'envoyer un message.
+                </p>
+            </header>
+
+            <form class="contactForm" id="contactForm">
+                <input type="hidden" name="access_key" value="547ad565-efc5-4db1-a118-683fbfb868b9">
+
+                <!-- Protection anti-spam -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1">
+
+                <div class="contactFormGroup">
+                    <label for="contactName">Nom</label>
+                    <input type="text" id="contactName" name="name" placeholder="Votre nom" autocomplete="name"
+                        required>
+                </div>
+
+                <div class="contactFormGroup">
+                    <label for="contactEmail">Adresse e-mail</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="exemple@email.com"
+                        autocomplete="email" required>
+                </div>
+
+                <div class="contactFormGroup">
+                    <label for="contactSubject">Sujet</label>
+                    <input type="text" id="contactSubject" name="subject" placeholder="Objet de votre message" required>
+                </div>
+
+                <div class="contactFormGroup">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="message" rows="6" placeholder="Votre message..."
+                        required></textarea>
+                </div>
+
+                <!-- Protection hCaptcha -->
+                <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+
+                <button class="contactSubmit" type="submit">
+                    Envoyer le message
+                </button>
+
+                <p class="contactStatus" id="contactStatus" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+
+    <div id="footerContainer"></div>
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/cursorGlow.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+</body>
+
+</html>

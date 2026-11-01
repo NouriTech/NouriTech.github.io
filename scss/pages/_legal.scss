@@ -1,0 +1,156 @@
+@use "../base/variables" as *;
+
+
+// ========================================
+// PAGE LÉGALE
+// ========================================
+
+.legalPage {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0 80px;
+}
+
+
+// ========================================
+// EN-TÊTE
+// ========================================
+
+.legalHeader {
+    width: 100%;
+    margin-bottom: 56px;
+    text-align: center;
+
+    h1 {
+        font-weight: $fontWeightBold;
+        color: var(--color-text);
+        margin: 16px 0;
+    }
+
+    p:not(.legalEyebrow) {
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.7;
+        color: var(--color-text-muted);
+    }
+}
+
+.legalHeader .legalEyebrow {
+    margin: 0 0 8px;
+    color: var(--color-primary-light);
+    font-weight: $fontWeightSemibold;
+    letter-spacing: 2px;
+}
+
+
+// ========================================
+// CONTENU
+// ========================================
+
+.legalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+
+// ========================================
+// SECTIONS
+// ========================================
+
+.legalSection {
+    width: 100%;
+
+    h2 {
+        font-weight: $fontWeightSemibold;
+        color: var(--color-primary-light);
+        margin-bottom: 20px;
+    }
+
+    p {
+        line-height: 1.8;
+        color: var(--color-text-muted);
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 24px;
+        margin: 16px 0;
+        color: var(--color-text-muted);
+    }
+
+    li {
+        line-height: 1.7;
+    }
+
+    strong {
+        font-weight: $fontWeightSemibold;
+        color: var(--color-text);
+    }
+
+    a {
+        color: var(--color-primary-light);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// ========================================
+// RESPONSIVE - TABLETTE
+// ========================================
+
+@media (max-width: $breakpointTablet) {
+
+    .legalPage {
+        max-width: 100%;
+    }
+
+    .legalHeader {
+        margin-bottom: 44px;
+    }
+}
+
+
+// ========================================
+// RESPONSIVE - MOBILE
+// ========================================
+
+@media (max-width: $breakpointMobile) {
+
+    .legalPage {
+        padding: 32px 0 56px;
+    }
+
+    .legalHeader {
+        margin-bottom: 36px;
+    }
+
+    .legalContent {
+        gap: 28px;
+    }
+
+    .legalSection {
+
+        h2 {
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    }
+}

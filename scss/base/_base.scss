@@ -1,0 +1,196 @@
+@use "variables" as *;
+
+// Chargement de la police Manrope
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../assets/fonts/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../assets/fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Réinitialisation globale
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background:
+        linear-gradient(
+            135deg,
+            transparent 68%,
+            rgba(30, 75, 200, 0.07) 74%,
+            rgba(30, 75, 200, 0.12) 79%,
+            rgba(30, 75, 200, 0.18) 85%,
+            rgba(30, 75, 200, 0.12) 91%,
+            rgba(30, 75, 200, 0.08) 94%,
+            transparent 98%
+        ),
+        var(--color-background);
+
+    min-height: 100vh;
+    color: var(--color-text);
+    font-family: $fontFamily;
+}
+
+// ========================================
+// TYPOGRAPHIE — DESKTOP
+// ========================================
+
+h1 {
+    font-size: $fontSizeH1;
+}
+
+h2 {
+    font-size: $fontSizeH2;
+}
+
+h3 {
+    font-size: $fontSizeH3;
+}
+
+h4 {
+    font-size: $fontSizeH4;
+}
+
+h5 {
+    font-size: $fontSizeH5;
+}
+
+h6 {
+    font-size: $fontSizeH6;
+}
+
+p {
+    font-size: $fontSizeP;
+}
+
+a {
+    font-size: $fontSizeA;
+}
+
+small {
+    font-size: $fontSizeSmall;
+}
+
+
+// ========================================
+// TYPOGRAPHIE — TABLETTE
+// ========================================
+
+@media (max-width: $breakpointTablet) {
+    h1 {
+        font-size: $fontSizeH1Tablet;
+    }
+
+    h2 {
+        font-size: $fontSizeH2Tablet;
+    }
+
+    h3 {
+        font-size: $fontSizeH3Tablet;
+    }
+
+    h4 {
+        font-size: $fontSizeH4Tablet;
+    }
+
+    h5 {
+        font-size: $fontSizeH5Tablet;
+    }
+
+    h6 {
+        font-size: $fontSizeH6Tablet;
+    }
+
+    p {
+        font-size: $fontSizePTablet;
+    }
+
+    a {
+        font-size: $fontSizeATablet;
+    }
+
+    small {
+        font-size: $fontSizeSmallTablet;
+    }
+}
+
+
+// ========================================
+// TYPOGRAPHIE — MOBILE
+// ========================================
+
+@media (max-width: $breakpointMobile) {
+    h1 {
+        font-size: $fontSizeH1Mobile;
+    }
+
+    h2 {
+        font-size: $fontSizeH2Mobile;
+    }
+
+    h3 {
+        font-size: $fontSizeH3Mobile;
+    }
+
+    h4 {
+        font-size: $fontSizeH4Mobile;
+    }
+
+    h5 {
+        font-size: $fontSizeH5Mobile;
+    }
+
+    h6 {
+        font-size: $fontSizeH6Mobile;
+    }
+
+    p {
+        font-size: $fontSizePMobile;
+    }
+
+    a {
+        font-size: $fontSizeAMobile;
+    }
+
+    small {
+        font-size: $fontSizeSmallMobile;
+    }
+}
+
