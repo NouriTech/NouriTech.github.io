@@ -1,3 +1,4 @@
+
 @use "../base/variables" as *;
 
 .navbar {
@@ -28,7 +29,10 @@
         height: 2px;
         background-color: var(--color-text-muted);
         border-radius: 2px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease,
+            background-color 0.3s ease;
     }
 
     &[aria-expanded="true"] {
@@ -44,13 +48,10 @@
             transform: translateY(-7px) rotate(-45deg);
         }
     }
-}
 
-.navbarToggle:hover span {
-    background-color: var(--color-primary-light);
-    transition: transform 0.3s ease,
-        opacity 0.3s ease,
-        background-color 0.3s ease;
+    &:hover span {
+        background-color: var(--color-primary-light);
+    }
 }
 
 .navbarLogo {
@@ -82,37 +83,43 @@
     list-style: none;
     margin: 0;
     padding: 0;
-}
 
-.navbarLinks a {
-    position: relative;
-    color: var(--color-text-muted);
-    font-size: $fontSizeNavigation;
-    text-decoration: none;
-    padding-left: 2px;
-    padding-right: 2px;
-    transition: color 0.3s ease;
-}
+    a {
+        position: relative;
+        color: var(--color-text-muted);
+        font-size: $fontSizeNavigation;
+        text-decoration: none;
+        padding-left: 2px;
+        padding-right: 2px;
+        transition: color 0.3s ease;
 
-.navbarLinks a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-primary-deep);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary-deep);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
 
-.navbarLinks a:hover {
-    color: var(--color-primary-light);
-}
+        &:hover {
+            color: var(--color-primary-light);
 
-.navbarLinks a:hover::after {
-    transform: scaleX(1);
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-primary-light);
+            outline-offset: 5px;
+            border-radius: 4px;
+        }
+    }
 }
 
 .navbarRight {
@@ -147,7 +154,6 @@
     }
 }
 
-
 /* Bouton de changement de thème */
 .themeToggle {
     display: flex;
@@ -155,9 +161,9 @@
     justify-content: center;
     gap: 8px;
     padding: 8px 12px;
-    color: var(--color-text-muted);
-    background-color: transparent;
-    border: 1px solid var(--color-text-muted);
+    color: var(--color-primary-light);
+    background-color: rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.35);
     border-radius: 10px;
     font-family: $fontFamily;
     font-size: $fontSizeSmall;
@@ -176,10 +182,10 @@
 
     &:hover {
         color: var(--color-primary-light);
+        background-color: rgba(139, 92, 246, 0.16);
         border-color: var(--color-primary-light);
     }
 }
-
 
 /* Tablettes et mobiles */
 @media (max-width: $breakpointTablet) {
@@ -205,10 +211,10 @@
         background-color: var(--color-surface);
         border-bottom: 1px solid var(--color-border);
         z-index: 100;
-    }
 
-    .navbarRight.isOpen {
-        display: flex;
+        &.isOpen {
+            display: flex;
+        }
     }
 
     .navbarLinks {
@@ -217,35 +223,48 @@
         gap: 25px;
         margin-bottom: 10px;
         padding: 4px;
+
+        a {
+            font-size: $fontSizeH5;
+            padding: 10px 30px;
+            border-radius: 10px;
+
+            &::after {
+                display: none;
+            }
+
+            &:active {
+                background: rgba(139, 92, 246, 0.16);
+                color: var(--color-primary-light);
+            }
+
+            &:focus-visible {
+                outline-offset: 3px;
+            }
+        }
     }
 
-    .navbarLinks a {
-        font-size: $fontSizeH5;
-        padding: 10px 30px;
-    }
-
-    .navbarLinks a::after {
-        display: none;
-    }
-
-    .navbarLinks a:hover {
-        background: linear-gradient(100deg,
+    /* Dégradé uniquement sur les appareils avec souris ou trackpad */
+    @media (hover: hover) and (pointer: fine) {
+        .navbarLinks a:hover {
+            background: linear-gradient(
+                100deg,
                 #1E4BC8 0%,
                 #4C3BCC 45%,
-                $colorPrimaryLight 100%);
-        padding: 10px 30px;
-        border-radius: 10px;
-        color: #F5F3FF;
+                $colorPrimaryLight 100%
+            );
+            color: #F5F3FF;
+        }
     }
 
     .navbarSocials {
         justify-content: center;
         padding: 4px;
-    }
 
-    .navbarSocials a {
-        padding: 10px;
-        margin: 0;
+        a {
+            padding: 10px;
+            margin: 0;
+        }
     }
 
     .navbarSocialLink svg {
@@ -266,17 +285,9 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 90;
-    }
 
-    .navbarOverlay.isVisible {
-        display: block;
-    }
-
-    .navbarRight {
-        z-index: 100;
-    }
-
-    .navbarOverlay {
-        z-index: 90;
+        &.isVisible {
+            display: block;
+        }
     }
 }
