@@ -145,3 +145,13 @@ $navbarHeightMobile: 64px;
 $breakpointMobile: 600px;
 $breakpointTablet: 900px;
 $breakpointDesktop: 1024px;
+
+
+
+// ========================================
+// Z-INDEX
+// ========================================
+
+// Navbar et navigation mobile SCSS
+// .navbar        : 100 — Au-dessus de l'overlay
+// .navbarOverlay : 90  — Assombrit le contenu derrière le menu

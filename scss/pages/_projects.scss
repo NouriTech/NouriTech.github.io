@@ -459,6 +459,23 @@
         margin-top: 64px;
     }
 
+
+    .projectCard {
+        transform: none;
+    }
+
+    .projectCard:hover {
+        border-color: var(--color-border);
+        transform: none;
+    }
+    
+    .projectCard.isActive,
+    .projectCard.isActive:hover {
+        border-color: var(--color-primary);
+    }
+
+
+
     .projectsGrid {
         display: flex;
         gap: 16px;
